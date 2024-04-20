@@ -32,7 +32,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="h-screen flex flex-col gap-8 justify-center items-center">
+    <main className="h-screen flex flex-col gap-8 justify-center items-center relative">
       <section className="flex flex-col items-center gap-1">
         <h1 className="text-2xl font-bold text-red-500">Aktueller Viewport</h1>
         <div className="font-bold flex justify-center gap-4">
@@ -42,7 +42,6 @@ export default function Home() {
         <p>Device: {device}</p>
       </section>
       <section>
-        <p>Lorem ipsum dolor sit amet.</p>
         <video width={320} height={240} controls muted>
           <source
             src="video/video1.mp4"
@@ -55,6 +54,11 @@ export default function Home() {
             media="(min-width:768px)"
           />
         </video>
+      </section>
+      <section>
+        <p className=" absolute bottom-4 right-4 p-2 bg-blue-100 border-solid border-blue-200 border-2">
+          Info: Zum Ändern des Videos muss die Seite neugeladen werden
+        </p>
       </section>
     </main>
   );
